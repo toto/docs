@@ -131,7 +131,9 @@ push: {
 }
 ```
 
-The configuration for macOS and tvOS works exactly as for iOS. Just add an additional configuration for each plattform under the appropriate key. Please note the key for macOS is `osx` and for tvOS is `tvos`. If you need to support both the dev and prod certificates, you can do that for all Apple plattforms like described above.
+The configuration for macOS and tvOS works exactly as for iOS. Just add an additional configuration for each plattform under the appropriate key. Please note the key for macOS is `osx` and for tvOS is `tvos`.
+
+If you need to support both the dev and prod certificates, you can do that for all Apple plattforms like described above.
 
 ```js
 var server = new ParseServer({
@@ -170,6 +172,8 @@ If you have a list of certificates, Parse Server's strategy on choosing them is 
 ### 3. Configure Client Apps
 
 Configure an app which connects to Parse Server. We have provided a detailed [list of steps to configure your iOS and Android clients](#configuring-your-clients-to-receive-push-notifications).
+
+Note that tvOS is supported in SDK versions _higher then_ 1.17.2.
 
 ### 4. Send Push Notifications
 
